@@ -1,0 +1,22 @@
+# 验证码
+captcha:
+  key-long: 6 # 验证码长度
+  img-width: 240 # 宽度
+  img-height: 80 # 高度
+  open-captcha: 0 #防爆破验证码开启此数，0代表每次登录都需要验证码，其他数字代表错误密码此数，如3代表错误三次后出现验证码
+  open-captcha-timeout: 3600 # 防爆破验证码超时时间，单位：s(秒)
+# MySQL配置
+mysql:
+  path: 192.168.2.106 # 链接地址
+  port: "3306" # 链接端口
+  config: charset=utf8mb4&parseTime=True&loc=Local # 其他配置
+  db-name: tcx_finance_a # 数据库名
+  username: root # 数据库用户
+  password: root # 数据库密码
+  prefix: "" #全局表前缀，单独定义TableName则不生效
+  singular: false # 是否开启全局禁用复数，true表示开启
+  engine: "" #数据库引擎，默认InnoDB
+  max-idle-conns: 10 #空闲中的最大连接数
+  max-open-conns: 100 # 打开到数据库的最大连接数
+  log-mode: info # 是控制台打印日志级别 "silent"、"error"、"warn"、"info" 不填默认info  填入silent可以关闭控制台日志
+  log-zap: true  # 日志是否用zap保存到本地
