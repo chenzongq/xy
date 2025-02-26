@@ -29,15 +29,15 @@ type JwtService struct{}
 ////@description: 判断JWT是否在黑名单内部
 ////@param: jwt string
 ////@return: bool
-//
-//func (jwtService *JwtService) IsBlacklist(jwt string) bool {
-//	_, ok := global.BlackCache.Get(jwt)
-//	return ok
-//	// err := global.XY_DB.Where("jwt = ?", jwt).First(&system.JwtBlacklist{}).Error
-//	// isNotFound := errors.Is(err, gorm.ErrRecordNotFound)
-//	// return !isNotFound
-//}
-//
+
+func (jwtService *JwtService) IsBlacklist(jwt string) bool {
+	_, ok := global.BlackCache.Get(jwt)
+	return ok
+	// err := global.XY_DB.Where("jwt = ?", jwt).First(&system.JwtBlacklist{}).Error
+	// isNotFound := errors.Is(err, gorm.ErrRecordNotFound)
+	// return !isNotFound
+}
+
 ////@author: [chenzongqing]
 ////@function: GetRedisJWT
 ////@description: 从redis取jwt

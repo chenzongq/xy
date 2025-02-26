@@ -7,4 +7,5 @@ type Server struct {
 	System   System   `mapstructure:"system" json:"system" yaml:"system"`
 	Timer    Timer    `mapstructure:"timer" json:"timer" yaml:"timer"`
 	Redis    Redis    `mapstructure:"redis" json:"redis" yaml:"redis"`
+	Email    Email    `mapstructure:"email" json:"email" yaml:"email"`
 }
